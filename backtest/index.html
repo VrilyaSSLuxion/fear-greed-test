@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de">
+<head><script>/* Testversion: eigene Browser-Einstellungen, getrennt von der Live-Seite */window.SITE_TEST={"label":"TESTVERSION V21","live":"https://vrilyassluxion.github.io/fear-greed/"};
+(() => { try { const ls = window.localStorage, S = Storage.prototype, P = "t21~", INIT = P + '__init';
+  const get = S.getItem, set = S.setItem, del = S.removeItem, key = S.key, clr = S.clear, len = Object.getOwnPropertyDescriptor(S, 'length').get;
+  const raw = () => { const a = []; for (let i = 0, n = len.call(ls); i < n; i++) a.push(key.call(ls, i)); return a; };
+  if (get.call(ls, INIT) == null) { for (const k of raw()) if (k && !/^[a-z0-9]+~/.test(k)) try { set.call(ls, P + k, get.call(ls, k)); } catch (e) { } set.call(ls, INIT, String(Date.now())); }
+  const own = () => raw().filter(k => k && k.startsWith(P) && k !== INIT).map(k => k.slice(P.length)), mine = s => s === ls;
+  S.getItem = function (k) { return get.call(this, mine(this) ? P + k : k); }; S.setItem = function (k, v) { return set.call(this, mine(this) ? P + k : k, v); };
+  S.removeItem = function (k) { return del.call(this, mine(this) ? P + k : k); }; S.key = function (i) { return mine(this) ? (own()[i] ?? null) : key.call(this, i); };
+  S.clear = function () { if (!mine(this)) return clr.call(this); for (const k of own()) del.call(ls, P + k); };
+  Object.defineProperty(S, 'length', { configurable: true, enumerable: true, get() { return mine(this) ? own().length : len.call(this); } });
+} catch (e) { } })();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backtest-Seiten · VrilyaSS</title>
+<meta name="description" content="Strategien prüfen, Trades auswerten, Journal führen.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M20 6a6 6 0 00-7 8L5 22l4 4 8-8a6 6 0 008-7l-4 4-4-1-1-4z' fill='%2333d39a'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../links.css">
+<link rel="stylesheet" href="../nav.css">
+</head>
+<body>
+<div class="page">
+  <nav class="apptabs" id="siteNav" data-page="backtest"></nav>
+  <div id="lp"></div>
+  <footer id="lpFoot"></footer>
+</div>
+<!-- V21: Inhalt dieser Seite – neue Einträge einfach in „items“ ergänzen (Format siehe ../links.js); Texte als { de, en, ar } -->
+<script>
+window.LINKPAGE = {
+ "docTitle": {
+  "de": "Backtest-Seiten · VrilyaSS",
+  "en": "Backtest sites · VrilyaSS",
+  "ar": "مواقع الاختبار الرجعي · VrilyaSS"
+ },
+ "title": {
+  "de": "Backtest-<span>Websites</span>",
+  "en": "Backtest <span>websites</span>",
+  "ar": "<span>مواقع</span> الاختبار الرجعي"
+ },
+ "lead": {
+  "de": "Strategien prüfen, Trades auswerten, Journal führen.",
+  "en": "Test strategies, review trades, keep a journal.",
+  "ar": "اختبر الاستراتيجيات وراجع الصفقات واحتفظ بسجل."
+ },
+ "note": {
+  "de": "Vorschläge zum Vergleichen – keine Empfehlung. Bedingungen ändern sich oft; bitte selbst prüfen. Der Seitenbetreiber ergänzt eigene Favoriten.",
+  "en": "Suggestions to compare – not a recommendation. Terms change often; please check yourself. The site owner adds own favourites.",
+  "ar": "اقتراحات للمقارنة – ليست توصية. الشروط تتغير كثيراً؛ يرجى التحقق بنفسك. يضيف صاحب الموقع مفضّلاته."
+ },
+ "groups": [
+  {
+   "items": [
+    {
+     "name": "TradeZella",
+     "url": "https://www.tradezella.com/",
+     "tags": [
+      {
+       "de": "Journal + Backtest",
+       "en": "journal + backtest",
+       "ar": "سجل + اختبار رجعي"
+      }
+     ]
+    },
+    {
+     "name": "FX Replay",
+     "url": "https://www.fxreplay.com/",
+     "tags": [
+      "Replay"
+     ]
+    },
+    {
+     "name": "Forex Tester",
+     "url": "https://forextester.com/",
+     "tags": [
+      {
+       "de": "Programm",
+       "en": "software",
+       "ar": "برنامج"
+      }
+     ]
+    },
+    {
+     "name": {
+      "de": "TradingView Bar-Replay",
+      "en": "TradingView bar replay",
+      "ar": "إعادة الشموع في TradingView"
+     },
+     "url": "https://www.tradingview.com/",
+     "ico": "tv",
+     "tags": [
+      "Replay"
+     ]
+    },
+    {
+     "name": {
+      "de": "Methoden-Vergleich & Impuls-Backtest (eingebaut)",
+      "en": "Method comparison & impulse backtest (built in)",
+      "ar": "مقارنة الطرق واختبار الاندفاع (مدمج)"
+     },
+     "url": "../fear-greed/",
+     "ico": "tool",
+     "desc": {
+      "de": "Im Fear-&-Greed-Chart: Methoden-Vergleich mit „Strategie umkehren“ und Impuls-Backtest mit TP/SL.",
+      "en": "In the Fear & Greed chart: method comparison with “invert strategy” and impulse backtest with TP/SL.",
+      "ar": "في رسم Fear & Greed: مقارنة الطرق مع «عكس الاستراتيجية» واختبار الاندفاع مع TP/SL."
+     }
+    }
+   ]
+  }
+ ]
+};
+</script>
+<script src="../links.js"></script>
+<script src="../nav.js"></script>
+</body>
+</html>

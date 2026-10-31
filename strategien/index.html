@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="de">
+<head><script>/* Testversion: eigene Browser-Einstellungen, getrennt von der Live-Seite */window.SITE_TEST={"label":"TESTVERSION V23","live":"https://vrilyassluxion.github.io/"};
+(() => { try { const ls = window.localStorage, S = Storage.prototype, P = "t21~", INIT = P + '__init';
+  const get = S.getItem, set = S.setItem, del = S.removeItem, key = S.key, clr = S.clear, len = Object.getOwnPropertyDescriptor(S, 'length').get;
+  const raw = () => { const a = []; for (let i = 0, n = len.call(ls); i < n; i++) a.push(key.call(ls, i)); return a; };
+  if (get.call(ls, INIT) == null) { for (const k of raw()) if (k && !/^[a-z0-9]+~/.test(k)) try { set.call(ls, P + k, get.call(ls, k)); } catch (e) { } set.call(ls, INIT, String(Date.now())); }
+  const own = () => raw().filter(k => k && k.startsWith(P) && k !== INIT).map(k => k.slice(P.length)), mine = s => s === ls;
+  S.getItem = function (k) { return get.call(this, mine(this) ? P + k : k); }; S.setItem = function (k, v) { return set.call(this, mine(this) ? P + k : k, v); };
+  S.removeItem = function (k) { return del.call(this, mine(this) ? P + k : k); }; S.key = function (i) { return mine(this) ? (own()[i] ?? null) : key.call(this, i); };
+  S.clear = function () { if (!mine(this)) return clr.call(this); for (const k of own()) del.call(ls, P + k); };
+  Object.defineProperty(S, 'length', { configurable: true, enumerable: true, get() { return mine(this) ? own().length : len.call(this); } });
+} catch (e) { } })();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trading-Strategien · VrilyaSS</title>
+<meta name="description" content="Strategien und gute Videos dazu – mit Verweis auf passende Indikatoren.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M6 5h18v22H8a2 2 0 01-2-2z' fill='none' stroke='%23d65ac9' stroke-width='3'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../links.css">
+<link rel="stylesheet" href="../nav.css">
+</head>
+<body>
+<div class="page">
+  <nav class="apptabs" id="siteNav" data-page="strategien"></nav>
+  <div id="lp"></div>
+  <footer id="lpFoot"></footer>
+</div>
+<!-- V21: Inhalt dieser Seite – neue Einträge einfach in „items“ ergänzen (Format siehe ../links.js); Texte als { de, en, ar } -->
+<script>
+window.LINKPAGE = {
+ "docTitle": {
+  "de": "Trading-Strategien · VrilyaSS",
+  "en": "Trading strategies · VrilyaSS",
+  "ar": "استراتيجيات التداول · VrilyaSS"
+ },
+ "title": {
+  "de": "Trading-<span>Strategien</span>",
+  "en": "Trading <span>strategies</span>",
+  "ar": "<span>استراتيجيات</span> التداول"
+ },
+ "lead": {
+  "de": "Strategien und gute Videos dazu – mit Verweis auf passende Indikatoren.",
+  "en": "Strategies and good videos about them – with links to matching indicators.",
+  "ar": "استراتيجيات وفيديوهات جيدة عنها – مع إشارة إلى المؤشرات المناسبة."
+ },
+ "note": {
+  "de": "Inhalte und genaue Links ergänzt der Seitenbetreiber nach und nach. Einträge mit 🔎 öffnen bis dahin die YouTube-Suche.",
+  "en": "The site owner adds content and exact links step by step. Until then, entries marked 🔎 open YouTube search.",
+  "ar": "يضيف صاحب الموقع المحتوى والروابط الدقيقة تدريجياً. حتى ذلك الحين تفتح العناصر المعلّمة 🔎 بحث يوتيوب."
+ },
+ "groups": [
+  {
+   "items": [
+    {
+     "name": "Ramtin FX",
+     "yt": "Ramtin FX strategy",
+     "soon": true
+    },
+    {
+     "name": "Bart FX",
+     "yt": "Bart FX trading",
+     "soon": true
+    },
+    {
+     "name": "Novik Candle",
+     "yt": "Novik Candle",
+     "soon": true
+    },
+    {
+     "name": "Oliver Velez",
+     "yt": "Oliver Velez trading",
+     "soon": true,
+     "tags": [
+      {
+       "de": "Price Action",
+       "en": "Price action",
+       "ar": "حركة السعر"
+      }
+     ]
+    },
+    {
+     "name": "Scarface Trades",
+     "yt": "Scarface Trades",
+     "soon": true
+    },
+    {
+     "name": "ORB (Opening Range Breakout)",
+     "yt": "Opening Range Breakout strategy",
+     "soon": true,
+     "desc": {
+      "de": "Ausbruch aus der Spanne der ersten Minuten nach Handelsbeginn.",
+      "en": "Breakout from the range of the first minutes after the open.",
+      "ar": "اختراق نطاق الدقائق الأولى بعد بدء التداول."
+     },
+     "tags": [
+      "ORB"
+     ]
+    },
+    {
+     "name": "LSOB (Liquidity Sweep Order Block)",
+     "yt": "LSOB Crypto Claudius",
+     "soon": true,
+     "desc": {
+      "de": "Nach einem Liquidity Sweep Box um die tiefste (Long) bzw. höchste (Short) Kerze; Einstieg beim Rücklauf in die Box.",
+      "en": "After a liquidity sweep, box around the lowest (long) or highest (short) candle; entry on the return into the box.",
+      "ar": "بعد كسح السيولة صندوق حول أدنى (شراء) أو أعلى (بيع) شمعة؛ الدخول عند العودة إلى الصندوق."
+     },
+     "tags": [
+      "LSOB",
+      "Crypto Claudius"
+     ],
+     "see": [
+      {
+       "label": {
+        "de": "LSOB / FVG / BOS im Fear-&-Greed-Chart",
+        "en": "LSOB / FVG / BOS in the Fear & Greed chart",
+        "ar": "LSOB / FVG / BOS في رسم Fear & Greed"
+       },
+       "href": "../fear-greed/"
+      },
+      {
+       "label": {
+        "de": "Indikatoren",
+        "en": "Indicators",
+        "ar": "المؤشرات"
+       },
+       "href": "../indikatoren/"
+      },
+      {
+       "label": {
+        "de": "Playlisten",
+        "en": "Playlists",
+        "ar": "قوائم التشغيل"
+       },
+       "href": "../playlisten/"
+      }
+     ]
+    },
+    {
+     "name": "Gus 841",
+     "yt": "Gus 841 trading",
+     "soon": true
+    },
+    {
+     "name": "Silent Flip",
+     "yt": "Silent Flip trading",
+     "soon": true,
+     "tags": [
+      {
+       "de": "auch als EA",
+       "en": "also as EA",
+       "ar": "متاح كروبوت أيضاً"
+      }
+     ],
+     "see": [
+      {
+       "label": {
+        "de": "EA-Creators",
+        "en": "EA creators",
+        "ar": "مطوّرو الروبوتات"
+       },
+       "href": "../ea-creators/"
+      }
+     ]
+    },
+    {
+     "name": "Touch and Turn",
+     "yt": "Touch and Turn trading",
+     "soon": true,
+     "see": [
+      {
+       "label": {
+        "de": "EA-Creators",
+        "en": "EA creators",
+        "ar": "مطوّرو الروبوتات"
+       },
+       "href": "../ea-creators/"
+      }
+     ]
+    },
+    {
+     "name": "Markttrades",
+     "yt": "Markttrades",
+     "soon": true
+    },
+    {
+     "name": "SK-System",
+     "yt": "SK System trading",
+     "soon": true,
+     "see": [
+      {
+       "label": {
+        "de": "Playlisten",
+        "en": "Playlists",
+        "ar": "قوائم التشغيل"
+       },
+       "href": "../playlisten/"
+      }
+     ]
+    },
+    {
+     "name": "Peak Decoder",
+     "yt": "Peak Decoder trading",
+     "soon": true,
+     "see": [
+      {
+       "label": {
+        "de": "EA-Creators",
+        "en": "EA creators",
+        "ar": "مطوّرو الروبوتات"
+       },
+       "href": "../ea-creators/"
+      }
+     ]
+    },
+    {
+     "name": "CRT (Candle Range Theory)",
+     "yt": "CRT candle range theory",
+     "soon": true,
+     "desc": {
+      "de": "Spanne einer größeren Kerze: Sweep eines Endes, Ziel das andere Ende.",
+      "en": "Range of a higher-timeframe candle: sweep of one end, target the other end.",
+      "ar": "نطاق شمعة إطار أكبر: كسح أحد الطرفين والهدف الطرف الآخر."
+     },
+     "tags": [
+      "CRT"
+     ],
+     "see": [
+      {
+       "label": {
+        "de": "Playlisten",
+        "en": "Playlists",
+        "ar": "قوائم التشغيل"
+       },
+       "href": "../playlisten/"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+};
+</script>
+<script src="../links.js"></script>
+<script src="../nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="de">
+<head><script>/* Testversion: eigene Browser-Einstellungen, getrennt von der Live-Seite */window.SITE_TEST={"label":"TESTVERSION V23","live":"https://vrilyassluxion.github.io/"};
+(() => { try { const ls = window.localStorage, S = Storage.prototype, P = "t21~", INIT = P + '__init';
+  const get = S.getItem, set = S.setItem, del = S.removeItem, key = S.key, clr = S.clear, len = Object.getOwnPropertyDescriptor(S, 'length').get;
+  const raw = () => { const a = []; for (let i = 0, n = len.call(ls); i < n; i++) a.push(key.call(ls, i)); return a; };
+  if (get.call(ls, INIT) == null) { for (const k of raw()) if (k && !/^[a-z0-9]+~/.test(k)) try { set.call(ls, P + k, get.call(ls, k)); } catch (e) { } set.call(ls, INIT, String(Date.now())); }
+  const own = () => raw().filter(k => k && k.startsWith(P) && k !== INIT).map(k => k.slice(P.length)), mine = s => s === ls;
+  S.getItem = function (k) { return get.call(this, mine(this) ? P + k : k); }; S.setItem = function (k, v) { return set.call(this, mine(this) ? P + k : k, v); };
+  S.removeItem = function (k) { return del.call(this, mine(this) ? P + k : k); }; S.key = function (i) { return mine(this) ? (own()[i] ?? null) : key.call(this, i); };
+  S.clear = function () { if (!mine(this)) return clr.call(this); for (const k of own()) del.call(ls, P + k); };
+  Object.defineProperty(S, 'length', { configurable: true, enumerable: true, get() { return mine(this) ? own().length : len.call(this); } });
+} catch (e) { } })();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YouTube-Trading · VrilyaSS</title>
+<meta name="description" content="Meine Kanäle und Trading-Kanäle anderer YouTuber, die ich empfehle.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='7' width='26' height='18' rx='5' fill='%23ff3b3b'/%3E%3Cpath d='M13 11l8 5-8 5z' fill='%23fff'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../links.css">
+<link rel="stylesheet" href="../nav.css">
+</head>
+<body>
+<div class="page">
+  <nav class="apptabs" id="siteNav" data-page="youtube"></nav>
+  <div id="lp"></div>
+  <footer id="lpFoot"></footer>
+</div>
+<!-- V21: Inhalt dieser Seite – neue Einträge einfach in „items“ ergänzen (Format siehe ../links.js); Texte als { de, en, ar } -->
+<script>
+window.LINKPAGE = {
+ "docTitle": {
+  "de": "YouTube-Trading · VrilyaSS",
+  "en": "YouTube trading · VrilyaSS",
+  "ar": "تداول يوتيوب · VrilyaSS"
+ },
+ "title": {
+  "de": "YouTube-Trading-<span>Kanäle</span>",
+  "en": "YouTube trading <span>channels</span>",
+  "ar": "<span>قنوات</span> تداول على يوتيوب"
+ },
+ "lead": {
+  "de": "Meine Kanäle und Trading-Kanäle anderer YouTuber, die ich empfehle.",
+  "en": "My channels and trading channels of other YouTubers I recommend.",
+  "ar": "قنواتي وقنوات تداول ليوتيوبرز آخرين أوصي بها."
+ },
+ "groups": [
+  {
+   "name": {
+    "de": "Meine Kanäle",
+    "en": "My channels",
+    "ar": "قنواتي"
+   },
+   "sort": false,
+   "items": [
+    {
+     "name": "VrilyaSS",
+     "url": "https://www.youtube.com/@VrilyaSS",
+     "links": [
+      {
+       "k": "telegram"
+      },
+      {
+       "k": "discord"
+      }
+     ]
+    },
+    {
+     "name": "neuberlintourist",
+     "url": "https://www.youtube.com/@neuberlintourist"
+    }
+   ]
+  },
+  {
+   "name": {
+    "de": "Empfohlene Kanäle",
+    "en": "Recommended channels",
+    "ar": "قنوات موصى بها"
+   },
+   "note": {
+    "de": "Telegram- und Discord-Links der YouTuber folgen.",
+    "en": "The YouTubers’ Telegram and Discord links are coming.",
+    "ar": "روابط تيليغرام وديسكورد لليوتيوبرز قريباً."
+   },
+   "items": [
+    {
+     "name": "Trader Lifestyle",
+     "url": "https://www.youtube.com/@traderlifestyle",
+     "desc": {
+      "de": "XAU-Master (Gold), Binäre Optionen und KI-Nachbau.",
+      "en": "XAU master (gold), binary options and AI rebuild.",
+      "ar": "XAU Master (الذهب) والخيارات الثنائية وإعادة بناء بالذكاء الاصطناعي."
+     },
+     "tags": [
+      {
+       "de": "Gold / XAU",
+       "en": "Gold / XAU",
+       "ar": "الذهب / XAU"
+      },
+      {
+       "de": "Binäre Optionen",
+       "en": "Binary options",
+       "ar": "خيارات ثنائية"
+      },
+      {
+       "de": "KI",
+       "en": "AI",
+       "ar": "ذكاء اصطناعي"
+      }
+     ]
+    },
+    {
+     "name": "Smart Money Crypto",
+     "url": "https://www.youtube.com/@Smart_Money_Crypto",
+     "desc": {
+      "de": "Täglich Livestream. Original-Autor des Fear & Greed Index – das Vorbild für den Nachbau auf dieser Seite.",
+      "en": "Daily livestream. Original author of the Fear & Greed index – the model for the rebuild on this site.",
+      "ar": "بث مباشر يومي. المؤلف الأصلي لمؤشر Fear & Greed – النموذج لإعادة البناء في هذا الموقع."
+     },
+     "tags": [
+      {
+       "de": "Täglich live",
+       "en": "Daily live",
+       "ar": "مباشر يومياً"
+      },
+      {
+       "de": "Krypto",
+       "en": "Crypto",
+       "ar": "عملات رقمية"
+      },
+      "Fear & Greed"
+     ]
+    },
+    {
+     "name": "Crypto Claudius (Deutsch)",
+     "url": "https://www.youtube.com/@CryptoClaudiusDeutsch",
+     "desc": {
+      "de": "Täglich Livestreams und Trading – mit LSOB-Indikator und GUSS-Indikator.",
+      "en": "Daily livestreams and trading – with LSOB and GUSS indicators.",
+      "ar": "بث مباشر يومي وتداول – مع مؤشري LSOB و GUSS."
+     },
+     "tags": [
+      {
+       "de": "Täglich live",
+       "en": "Daily live",
+       "ar": "مباشر يومياً"
+      },
+      "Trading",
+      {
+       "de": "Indikatoren",
+       "en": "Indicators",
+       "ar": "مؤشرات"
+      },
+      {
+       "de": "Deutsch",
+       "en": "German",
+       "ar": "ألماني"
+      }
+     ],
+     "see": [
+      {
+       "label": {
+        "de": "Trading-Strategien",
+        "en": "Trading strategies",
+        "ar": "استراتيجيات التداول"
+       },
+       "href": "../strategien/"
+      }
+     ]
+    },
+    {
+     "name": "Crypto Claudius (English)",
+     "url": "https://www.youtube.com/@CryptoClaudius",
+     "desc": {
+      "de": "Der englische Kanal von Crypto Claudius – Livestreams und Trading mit LSOB- und GUSS-Indikator.",
+      "en": "The English channel of Crypto Claudius – livestreams and trading with LSOB and GUSS indicators.",
+      "ar": "القناة الإنجليزية لـ Crypto Claudius – بث مباشر وتداول مع مؤشري LSOB و GUSS."
+     },
+     "tags": [
+      "Live",
+      "Trading",
+      {
+       "de": "Indikatoren",
+       "en": "Indicators",
+       "ar": "مؤشرات"
+      },
+      {
+       "de": "Englisch",
+       "en": "English",
+       "ar": "إنجليزي"
+      }
+     ]
+    },
+    {
+     "name": "Crypto Wall Street",
+     "url": "https://www.youtube.com/@cryptowallstreet",
+     "desc": {
+      "de": "Täglich Update-Video, Livestreams, News und Markt-Updates, Trading-Livestream.",
+      "en": "Daily update video, livestreams, news and market updates, trading livestream.",
+      "ar": "فيديو تحديث يومي وبث مباشر وأخبار وتحديثات السوق وبث تداول."
+     },
+     "tags": [
+      {
+       "de": "Täglich",
+       "en": "Daily",
+       "ar": "يومي"
+      },
+      "Livestream",
+      "News"
+     ]
+    },
+    {
+     "name": "Didi Random",
+     "url": "https://www.youtube.com/@didirandom",
+     "desc": {
+      "de": "Livestreams und tägliche Videos.",
+      "en": "Livestreams and daily videos.",
+      "ar": "بث مباشر وفيديوهات يومية."
+     },
+     "tags": [
+      "Livestream",
+      {
+       "de": "Täglich",
+       "en": "Daily",
+       "ar": "يومي"
+      }
+     ]
+    },
+    {
+     "name": "Robyn HD",
+     "url": "https://www.youtube.com/@RobynHD",
+     "desc": {
+      "de": "Tägliche Bitcoin- und Markt-News.",
+      "en": "Daily Bitcoin and market news.",
+      "ar": "أخبار يومية عن بيتكوين والسوق."
+     },
+     "tags": [
+      {
+       "de": "Täglich",
+       "en": "Daily",
+       "ar": "يومي"
+      },
+      "Bitcoin",
+      "News"
+     ]
+    }
+   ]
+  }
+ ]
+};
+</script>
+<script src="../links.js"></script>
+<script src="../nav.js"></script>
+</body>
+</html>

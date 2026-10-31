@@ -1,0 +1,328 @@
+{
+ "info": "Einträge der Seite Trading Tools. category: metatrader | tradingview | desktop. status: download | invite | market | free | soon | private. Neueste Version zuerst.",
+ "items": [
+  {
+   "id": "ticker",
+   "category": "desktop",
+   "name": "VrilyaSS Ticker",
+   "platform": "Windows",
+   "requires": "Windows 10 / 11",
+   "status": "download",
+   "short": "Der schwarze Bitcoin-Ticker von der Fear-&-Greed-Seite als eigenes Programm: Kurs in $ und €, Liquidations-Cluster, Longs/Shorts – jede Spalte einstellbar, immer im Vordergrund.",
+   "created": "2026-10-29",
+   "updated": "2026-10-30",
+   "tags": [
+    "ticker",
+    "bitcoin",
+    "liquidationen",
+    "cluster",
+    "heatmap",
+    "kurs",
+    "overlay"
+   ],
+   "description": [
+    "Ein schmales Fenster ohne Browser, das auf Wunsch immer über allen anderen Programmen liegt – zum Beispiel über TradingView oder MetaTrader.",
+    "Kurs in Dollar und Euro mit Tick-Pfeil, Veränderung über 4 H / 1 H / 15 M / 5 M und 24 Stunden, die Liquidations-Cluster (stärkste, nächste, fernste, Mitte) und die Longs/Shorts der letzten 24 Stunden.",
+    "Kurs und Kerzen kommen live von Binance. Cluster und Liquidationen liefert das Fear-&-Greed-Programm auf dem PC; läuft es nicht, holt der Ticker sie automatisch von der Website."
+   ],
+   "features": [
+    "Jede Spalte einzeln einstellbar: Breite, Schriftgrößen, Abstände, Farben, Reihenfolge, an/aus",
+    "Stile als Set-Dateien speichern, exportieren, laden und weitergeben",
+    "Immer im Vordergrund, Deckkraft, mit Windows starten",
+    "Eine einzige EXE, keine Installation"
+   ],
+   "images": [
+    {
+     "src": "img/ticker/ticker.png",
+     "caption": "Der Ticker mit Kurs, Zeitrahmen, Liquidations-Clustern und Longs/Shorts"
+    },
+    {
+     "src": "img/ticker/einstellungen.png",
+     "caption": "Einstellungen: Spalten, Regler je Spalte, Set-Dateien und Fenster"
+    }
+   ],
+   "downloads": [
+    {
+     "label": "VrilyaSS Ticker V1 (Windows, EXE)",
+     "url": "https://github.com/VrilyaSSLuxion/ticker/releases/download/v1/VrilyaSS-Ticker-1.0.0.exe",
+     "size": "105 MB"
+    },
+    {
+     "label": "Installations-Info (TXT)",
+     "url": "https://github.com/VrilyaSSLuxion/ticker/releases/download/v1/INSTALLATION-bitte-lesen.txt",
+     "size": "3 KB"
+    }
+   ],
+   "links": [
+    {
+     "label": "Eigenes GitHub-Projekt",
+     "url": "https://github.com/VrilyaSSLuxion/ticker",
+     "note": "Code + jede Version"
+    },
+    {
+     "label": "Alle Versionen auf GitHub",
+     "url": "https://github.com/VrilyaSSLuxion/ticker/releases",
+     "note": "Versionsverlauf"
+    }
+   ],
+   "hints": [
+    "EXE herunterladen und doppelklicken – keine Installation nötig. Einstellungen und Set-Dateien liegen unter %APPDATA%\\VrilyaSS Ticker.",
+    "Das Programm ist nicht signiert. Zeigt Windows „Der Computer wurde durch Windows geschützt“, auf „Weitere Informationen“ und dann „Trotzdem ausführen“ klicken.",
+    "Beim Drüberfahren erscheinen oben rechts ⚙ (Einstellungen), – (minimieren) und ✕ (schließen). Rechtsklick auf eine Spalte öffnet ebenfalls die Einstellungen.",
+    "Keine Anlageberatung."
+   ],
+   "versions": [
+    {
+     "v": "1",
+     "date": "2026-10-30",
+     "notes": [
+      "Erste Version: Ticker als eigenes Windows-Programm",
+      "Spalten einzeln einstellbar, Set-Dateien, immer im Vordergrund, Deckkraft, Autostart"
+     ],
+     "downloads": [
+      {
+       "label": "Programm",
+       "url": "https://github.com/VrilyaSSLuxion/ticker/releases/download/v1/VrilyaSS-Ticker-1.0.0.exe",
+       "size": "105 MB"
+      },
+      {
+       "label": "Installations-Info",
+       "url": "https://github.com/VrilyaSSLuxion/ticker/releases/download/v1/INSTALLATION-bitte-lesen.txt",
+       "size": "3 KB"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fib-overlay",
+   "category": "desktop",
+   "name": "Fib Overlay (SK-System)",
+   "platform": "Windows",
+   "requires": "Windows 10 / 11",
+   "status": "download",
+   "short": "Fibonacci-Overlay, das über jedem Chart liegt – Pocket Option, TradingView, MT4/MT5 – mit den 4 Setups des SK-Systems und Zeichenwerkzeugen wie bei TradingView.",
+   "created": "2026-10-21",
+   "updated": "2026-10-23",
+   "tags": [
+    "fibonacci",
+    "fib",
+    "sk",
+    "pocket option",
+    "overlay",
+    "setup",
+    "orderblock"
+   ],
+   "description": [
+    "Ein durchsichtiges Fenster, das über dem Chart liegt – egal ob Pocket Option, TradingView, MetaTrader oder ein anderes Programm. Du ziehst die Fib vom Hoch zum Tief, und die vier Setups des SK-Systems stehen sofort am Chart: Entry, Stop-Loss, Break-Even und TP1 bis TP3.",
+    "Dazu kommen Zeichenwerkzeuge, die sich wie bei TradingView bedienen lassen – Trendlinie, Strahl, horizontale Linie, Rechteck mit Text wie „ORDERBLOCK“ – mit Rechtsklick-Menü, Eigenschaften-Fenster und eigenen Vorlagen.",
+    "Wenn du an zwei Punkten der Fib die Preise eingibst, rechnet das Overlay für jedes Level den Preis aus und zeigt ihn an Linien und Preisschildern an."
+   ],
+   "features": [
+    "Sofort-Fib per Ziehen, mehrere Fibs gleichzeitig, Preise über zwei Punkte eingeben",
+    "4 Handels-Setups des SK-Systems: Entry, SL, BE, TP1–TP3 – mit globalen oder eigenen R-Werten",
+    "Fib zeigt wahlweise die Setups (jede Linie einzeln, Fläche je Linie) oder die Level-Liste wie TradingView",
+    "Fib im TradingView-Stil: 24 Level-Plätze, Fläche je Level an/aus mit eigener Farbe",
+    "Zeichenwerkzeuge: Trendlinie, Strahl, horizontaler Strahl, horizontale Linie, Rechteck mit 8 Griffen und Mittellinie",
+    "Text auf allen Zeichnungen: Farbe, Größe, Fett, Kursiv, Oben/Mitte/Unten, Links/Zentriert/Rechts",
+    "Rechtsklick-Menü wie TradingView: Vorlage, Visuelle Reihenfolge, Objektbaum, Klonen (Strg+Ziehen), Kopieren/Einfügen, Fixieren, Verbergen",
+    "Magnet: Punkte rasten am Hoch oder Tief der Kerze ein",
+    "Test-Funktionen: Alarm, wenn der Kurs ein Level, ein Rechteck oder eine Linie erreicht; Automatikmodus schaltet die Setups 1 → 4 weiter",
+    "50 Designs in Schwarz, Violett und Gold, optional Matrix-Regen",
+    "Einstellungen, Presets und 5 Speicherplätze, frei belegbare Hotkeys"
+   ],
+   "images": [
+    {
+     "src": "img/fib-overlay/zeichnungen.png",
+     "caption": "Fib mit Setup 1, Rechteck „ORDERBLOCK“, Linien mit Text und Preisschild"
+    },
+    {
+     "src": "img/fib-overlay/dashboard.png",
+     "caption": "Das Dashboard (Design „Obsidian Violett“)"
+    },
+    {
+     "src": "img/fib-overlay/menue.png",
+     "caption": "Rechtsklick-Menü mit Vorlagen und Visueller Reihenfolge"
+    },
+    {
+     "src": "img/fib-overlay/eigenschaften.png",
+     "caption": "Eigenschaften: Stil, Text und Koordinaten"
+    },
+    {
+     "src": "img/fib-overlay/levels.png",
+     "caption": "Fib-Level wie bei TradingView – Fläche je Level einstellbar"
+    },
+    {
+     "src": "img/fib-overlay/designs.png",
+     "caption": "Einige der 50 Designs"
+    }
+   ],
+   "downloads": [
+    {
+     "label": "Fib Overlay V6 (Windows, ZIP)",
+     "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v6/FibOverlay_V6.zip",
+     "size": "37 MB"
+    },
+    {
+     "label": "Quellcode V6 (Python, ZIP)",
+     "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v6/FibOverlay_V6_Quellcode.zip",
+     "size": "56 KB"
+    }
+   ],
+   "links": [
+    {
+     "label": "Quellcode ansehen",
+     "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/blob/main/quellcode/fib-overlay/fib_overlay.py",
+     "note": "GitHub"
+    },
+    {
+     "label": "Alle Versionen auf GitHub",
+     "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases",
+     "note": "Versionsverlauf"
+    },
+    {
+     "label": "Eigenes GitHub-Projekt",
+     "url": "https://github.com/VrilyaSSLuxion/fib-overlay",
+     "note": "Code + jede Version"
+    }
+   ],
+   "hints": [
+    "ZIP entpacken und FibOverlay.exe starten – keine Installation nötig. Die Einstellungen liegen unter %APPDATA%\\FibOverlay.",
+    "Das Programm ist nicht signiert. Zeigt Windows „Der Computer wurde durch Windows geschützt“, auf „Weitere Informationen“ und dann „Trotzdem ausführen“ klicken.",
+    "Das Overlay liegt als Bild über dem Chart. Wird der Chart verschoben oder gezoomt (z. B. Autoscroll bei Pocket Option), bleibt die Fib am Bildschirm stehen und muss neu gesetzt werden.",
+    "Alarm, Automatikmodus und Magnet lesen die Kerzen vom Bildschirm ab und sind Test-Funktionen.",
+    "Der Quellcode ist eine einzige Python-Datei (PyQt5). Im Quellcode-ZIP steht, wie man das Programm ohne EXE startet oder die EXE selbst baut."
+   ],
+   "versions": [
+    {
+     "v": "6",
+     "date": "2026-10-23",
+     "notes": [
+      "Neue Spalte „Fläche“ je Setup-Linie – z. B. rote Fläche nur zwischen Entry und SL, keine Fläche zwischen BE und TP",
+      "Die Version steht jetzt oben im Einstellungsfenster"
+     ],
+     "downloads": [
+      {
+       "label": "Programm",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v6/FibOverlay_V6.zip",
+       "size": "37 MB"
+      },
+      {
+       "label": "Quellcode",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v6/FibOverlay_V6_Quellcode.zip",
+       "size": "56 KB"
+      }
+     ]
+    },
+    {
+     "v": "5",
+     "date": "2026-10-23",
+     "notes": [
+      "„Setup N anzeigen“ ist ein Hauptschalter: Die Linien-Häkchen bleiben, wie man sie setzt, und lassen sich bei ausgeschaltetem Setup vorbereiten",
+      "Umschalter „Fib zeigt“: die Setups (jede Linie einzeln) oder die Level-Liste wie TradingView – nichts steht mehr doppelt auf einer Linie",
+      "Knopf „Wie mein TradingView-Fib“ schaltet nur noch auf die Level-Liste und lässt die Setups unverändert"
+     ],
+     "downloads": [
+      {
+       "label": "Programm",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v5/FibOverlay_V5.zip",
+       "size": "37 MB"
+      },
+      {
+       "label": "Quellcode",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v5/FibOverlay_V5_Quellcode.zip",
+       "size": "56 KB"
+      }
+     ]
+    },
+    {
+     "v": "4",
+     "date": "2026-10-23",
+     "notes": [
+      "Setups 1–4 und jede Linie (Entry, SL, BE, TP1–TP3) auch in den Einstellungen an- und ausschalten – synchron mit dem Dashboard und dem Automatikmodus"
+     ],
+     "downloads": [
+      {
+       "label": "Programm",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v4/FibOverlay_V4.zip",
+       "size": "37 MB"
+      },
+      {
+       "label": "Quellcode",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v4/FibOverlay_V4_Quellcode.zip",
+       "size": "54 KB"
+      }
+     ]
+    },
+    {
+     "v": "3",
+     "date": "2026-10-23",
+     "notes": [
+      "Rechtsklick-Menü wie TradingView: Alarm, Vorlage, Visuelle Reihenfolge, Objektbaum, Klonen, Kopieren/Einfügen, Fixieren, Verbergen, Entfernen",
+      "Eigenschaften-Fenster mit den Reitern Stil, Text und Koordinaten",
+      "Text auf allen Zeichnungen, Rechteck „Verlängern“, Mauszeiger an den Griffen wie bei TradingView",
+      "Fib: Linie 0 gelb, Linie 1 rot, Fläche je Level mit eigener Farbe",
+      "Alarm für Rechtecke und Linien, Automatikmodus (Setups nur vorwärts 1 → 4)",
+      "50 Designs; Designwechsel ohne dass sich das Einstellungsfenster schließt"
+     ],
+     "downloads": [
+      {
+       "label": "Programm",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v3/FibOverlay_V3.zip",
+       "size": "37 MB"
+      },
+      {
+       "label": "Quellcode",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v3/FibOverlay_V3_Quellcode.zip",
+       "size": "54 KB"
+      }
+     ]
+    },
+    {
+     "v": "2",
+     "date": "2026-10-23",
+     "notes": [
+      "Rechteck wie bei TradingView mit 8 Griffen und Mittellinie",
+      "Objektliste, Fixieren und Verbergen je Objekt, Vorlagen je Werkzeug",
+      "TradingView-Level-Liste mit 24 Plätzen, 5 Speicherplätze für Einstellungen",
+      "Länge des horizontalen Strahls in Pixel oder Kerzen, 29 Designs"
+     ],
+     "downloads": [
+      {
+       "label": "Programm",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v2/FibOverlay_V2.zip",
+       "size": "37 MB"
+      },
+      {
+       "label": "Quellcode",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v2/FibOverlay_V2_Quellcode.zip",
+       "size": "46 KB"
+      }
+     ]
+    },
+    {
+     "v": "1",
+     "date": "2026-10-23",
+     "notes": [
+      "Eigenständiges Programm (EXE) mit Dashboard und den Setups 1–4",
+      "Einstellungen und Presets, Hotkeys",
+      "Zeichenwerkzeuge, Magnet, Fib im TradingView-Stil, mehrere Fibs",
+      "Level-Verlängerung mit Alarm, Designs und Matrix-Regen"
+     ],
+     "downloads": [
+      {
+       "label": "Programm",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v1/FibOverlay_V1.zip",
+       "size": "37 MB"
+      },
+      {
+       "label": "Quellcode",
+       "url": "https://github.com/VrilyaSSLuxion/fear-greed-v2/releases/download/fib-overlay-v1/FibOverlay_V1_Quellcode.zip",
+       "size": "40 KB"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

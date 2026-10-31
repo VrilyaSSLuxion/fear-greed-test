@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head><script>/* Testversion: eigene Browser-Einstellungen, getrennt von der Live-Seite */window.SITE_TEST={"label":"TESTVERSION V23","live":"https://vrilyassluxion.github.io/"};
+(() => { try { const ls = window.localStorage, S = Storage.prototype, P = "t21~", INIT = P + '__init';
+  const get = S.getItem, set = S.setItem, del = S.removeItem, key = S.key, clr = S.clear, len = Object.getOwnPropertyDescriptor(S, 'length').get;
+  const raw = () => { const a = []; for (let i = 0, n = len.call(ls); i < n; i++) a.push(key.call(ls, i)); return a; };
+  if (get.call(ls, INIT) == null) { for (const k of raw()) if (k && !/^[a-z0-9]+~/.test(k)) try { set.call(ls, P + k, get.call(ls, k)); } catch (e) { } set.call(ls, INIT, String(Date.now())); }
+  const own = () => raw().filter(k => k && k.startsWith(P) && k !== INIT).map(k => k.slice(P.length)), mine = s => s === ls;
+  S.getItem = function (k) { return get.call(this, mine(this) ? P + k : k); }; S.setItem = function (k, v) { return set.call(this, mine(this) ? P + k : k, v); };
+  S.removeItem = function (k) { return del.call(this, mine(this) ? P + k : k); }; S.key = function (i) { return mine(this) ? (own()[i] ?? null) : key.call(this, i); };
+  S.clear = function () { if (!mine(this)) return clr.call(this); for (const k of own()) del.call(ls, P + k); };
+  Object.defineProperty(S, 'length', { configurable: true, enumerable: true, get() { return mine(this) ? own().length : len.call(this); } });
+} catch (e) { } })();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Indikatoren · VrilyaSS</title>
+<meta name="description" content="Indikatoren mit Videos dazu – getrennt nach TradingView und MetaTrader.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 23l7-9 6 4 9-12' fill='none' stroke='%235b9cff' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../links.css">
+<link rel="stylesheet" href="../nav.css">
+</head>
+<body>
+<div class="page">
+  <nav class="apptabs" id="siteNav" data-page="indikatoren"></nav>
+  <div id="lp"></div>
+  <footer id="lpFoot"></footer>
+</div>
+<!-- V21: Inhalt dieser Seite – neue Einträge einfach in „items“ ergänzen (Format siehe ../links.js); Texte als { de, en, ar } -->
+<script>
+window.LINKPAGE = {
+ "docTitle": {
+  "de": "Indikatoren · VrilyaSS",
+  "en": "Indicators · VrilyaSS",
+  "ar": "المؤشرات · VrilyaSS"
+ },
+ "title": {
+  "de": "Gute <span>Indikatoren</span>",
+  "en": "Good <span>indicators</span>",
+  "ar": "<span>مؤشرات</span> جيدة"
+ },
+ "lead": {
+  "de": "Indikatoren mit Videos dazu – getrennt nach TradingView und MetaTrader.",
+  "en": "Indicators with videos – split into TradingView and MetaTrader.",
+  "ar": "مؤشرات مع فيديوهات – مقسمة بين TradingView و MetaTrader."
+ },
+ "note": {
+  "de": "Inhalte und genaue Links ergänzt der Seitenbetreiber nach und nach. Einträge mit 🔎 öffnen bis dahin die YouTube-Suche.",
+  "en": "The site owner adds content and exact links step by step. Until then, entries marked 🔎 open YouTube search.",
+  "ar": "يضيف صاحب الموقع المحتوى والروابط الدقيقة تدريجياً. حتى ذلك الحين تفتح العناصر المعلّمة 🔎 بحث يوتيوب."
+ },
+ "groups": [
+  {
+   "name": "TradingView",
+   "items": [
+    {
+     "name": {
+      "de": "LSOB · FVG · BOS · Trendlinien (eingebaut)",
+      "en": "LSOB · FVG · BOS · trendlines (built in)",
+      "ar": "LSOB · FVG · BOS · خطوط الاتجاه (مدمجة)"
+     },
+     "url": "../fear-greed/",
+     "ico": "tool",
+     "desc": {
+      "de": "Im Fear-&-Greed-Chart dieser Seite: Knöpfe LSOB, FVG, BOS, Trendlinien, Volumenprofil, RSI/MACD – mit Alarm und Rückblick im Methoden-Vergleich.",
+      "en": "In this site’s Fear & Greed chart: buttons LSOB, FVG, BOS, trendlines, volume profile, RSI/MACD – with alerts and review in the method comparison.",
+      "ar": "في رسم Fear & Greed بهذا الموقع: أزرار LSOB و FVG و BOS وخطوط الاتجاه وملف الحجم و RSI/MACD – مع تنبيهات ومراجعة في مقارنة الطرق."
+     }
+    },
+    {
+     "name": {
+      "de": "Eigene TradingView-Skripte",
+      "en": "Own TradingView scripts",
+      "ar": "سكربتات TradingView الخاصة"
+     },
+     "url": "../tools/?bereich=tradingview",
+     "ico": "tv",
+     "desc": {
+      "de": "Pine-Script-Indikatoren und Strategien des Seitenbetreibers (Trading Tools).",
+      "en": "Pine Script indicators and strategies by the site owner (Trading Tools).",
+      "ar": "مؤشرات واستراتيجيات Pine Script لصاحب الموقع (أدوات التداول)."
+     }
+    },
+    {
+     "name": {
+      "de": "LSOB-Indikator (Crypto Claudius)",
+      "en": "LSOB indicator (Crypto Claudius)",
+      "ar": "مؤشر LSOB (Crypto Claudius)"
+     },
+     "yt": "LSOB Indikator Crypto Claudius",
+     "soon": true,
+     "ico": "tv",
+     "see": [
+      {
+       "label": {
+        "de": "Trading-Strategien",
+        "en": "Trading strategies",
+        "ar": "استراتيجيات التداول"
+       },
+       "href": "../strategien/"
+      }
+     ]
+    },
+    {
+     "name": {
+      "de": "GUSS-Indikator (Crypto Claudius)",
+      "en": "GUSS indicator (Crypto Claudius)",
+      "ar": "مؤشر GUSS (Crypto Claudius)"
+     },
+     "yt": "GUSS Indikator Crypto Claudius",
+     "soon": true,
+     "ico": "tv"
+    }
+   ]
+  },
+  {
+   "name": "MetaTrader 4 / 5",
+   "empty": {
+    "de": "MT4/MT5-Indikatoren folgen.",
+    "en": "MT4/MT5 indicators are coming.",
+    "ar": "مؤشرات MT4/MT5 قريباً."
+   },
+   "items": [
+    {
+     "name": {
+      "de": "Eigene MT4/MT5-Indikatoren und EAs",
+      "en": "Own MT4/MT5 indicators and EAs",
+      "ar": "مؤشرات وروبوتات MT4/MT5 الخاصة"
+     },
+     "url": "../tools/?bereich=metatrader",
+     "ico": "mt",
+     "soon": true
+    }
+   ]
+  }
+ ]
+};
+</script>
+<script src="../links.js"></script>
+<script src="../nav.js"></script>
+</body>
+</html>

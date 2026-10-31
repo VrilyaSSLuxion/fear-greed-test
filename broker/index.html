@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+<head><script>/* Testversion: eigene Browser-Einstellungen, getrennt von der Live-Seite */window.SITE_TEST={"label":"TESTVERSION V23","live":"https://vrilyassluxion.github.io/"};
+(() => { try { const ls = window.localStorage, S = Storage.prototype, P = "t21~", INIT = P + '__init';
+  const get = S.getItem, set = S.setItem, del = S.removeItem, key = S.key, clr = S.clear, len = Object.getOwnPropertyDescriptor(S, 'length').get;
+  const raw = () => { const a = []; for (let i = 0, n = len.call(ls); i < n; i++) a.push(key.call(ls, i)); return a; };
+  if (get.call(ls, INIT) == null) { for (const k of raw()) if (k && !/^[a-z0-9]+~/.test(k)) try { set.call(ls, P + k, get.call(ls, k)); } catch (e) { } set.call(ls, INIT, String(Date.now())); }
+  const own = () => raw().filter(k => k && k.startsWith(P) && k !== INIT).map(k => k.slice(P.length)), mine = s => s === ls;
+  S.getItem = function (k) { return get.call(this, mine(this) ? P + k : k); }; S.setItem = function (k, v) { return set.call(this, mine(this) ? P + k : k, v); };
+  S.removeItem = function (k) { return del.call(this, mine(this) ? P + k : k); }; S.key = function (i) { return mine(this) ? (own()[i] ?? null) : key.call(this, i); };
+  S.clear = function () { if (!mine(this)) return clr.call(this); for (const k of own()) del.call(ls, P + k); };
+  Object.defineProperty(S, 'length', { configurable: true, enumerable: true, get() { return mine(this) ? own().length : len.call(this); } });
+} catch (e) { } })();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Broker & Börsen · VrilyaSS</title>
+<meta name="description" content="Registrierung bei Börsen und Brokern.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%237fd6ff' stroke-width='3'/%3E%3Cpath d='M4 16h24' stroke='%237fd6ff' stroke-width='3'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../links.css">
+<link rel="stylesheet" href="../nav.css">
+</head>
+<body>
+<div class="page">
+  <nav class="apptabs" id="siteNav" data-page="broker"></nav>
+  <div id="lp"></div>
+  <footer id="lpFoot"></footer>
+</div>
+<!-- V21: Inhalt dieser Seite – neue Einträge einfach in „items“ ergänzen (Format siehe ../links.js); Texte als { de, en, ar } -->
+<script>
+window.LINKPAGE = {
+ "docTitle": {
+  "de": "Broker & Börsen · VrilyaSS",
+  "en": "Brokers & exchanges · VrilyaSS",
+  "ar": "الوسطاء والبورصات · VrilyaSS"
+ },
+ "title": {
+  "de": "Broker & <span>Börsen</span>",
+  "en": "Brokers & <span>exchanges</span>",
+  "ar": "الوسطاء و<span>البورصات</span>"
+ },
+ "lead": {
+  "de": "Registrierung bei Börsen und Brokern.",
+  "en": "Sign up with exchanges and brokers.",
+  "ar": "التسجيل لدى البورصات والوسطاء."
+ },
+ "note": {
+  "de": "Die Partner-Links des Seitenbetreibers folgen. Bis dahin führen die Einträge zur offiziellen Seite. Keine Anlageberatung.",
+  "en": "The site owner’s partner links are coming. Until then the entries lead to the official site. Not investment advice.",
+  "ar": "روابط الشراكة لصاحب الموقع قريباً. حتى ذلك الحين تقود العناصر إلى الموقع الرسمي. ليست نصيحة استثمارية."
+ },
+ "groups": [
+  {
+   "name": {
+    "de": "Krypto-Börsen",
+    "en": "Crypto exchanges",
+    "ar": "بورصات العملات الرقمية"
+   },
+   "items": [
+    {
+     "name": "Binance",
+     "url": "https://www.binance.com/",
+     "aff": "soon"
+    },
+    {
+     "name": "Bybit",
+     "url": "https://www.bybit.com/",
+     "aff": "soon"
+    },
+    {
+     "name": "OKX",
+     "url": "https://www.okx.com/",
+     "aff": "soon"
+    },
+    {
+     "name": "Bitget",
+     "url": "https://www.bitget.com/",
+     "aff": "soon"
+    }
+   ]
+  },
+  {
+   "name": {
+    "de": "Forex-/CFD-Broker",
+    "en": "Forex/CFD brokers",
+    "ar": "وسطاء الفوركس/CFD"
+   },
+   "items": [],
+   "empty": {
+    "de": "Folgt.",
+    "en": "Coming.",
+    "ar": "قريباً."
+   }
+  }
+ ]
+};
+</script>
+<script src="../links.js"></script>
+<script src="../nav.js"></script>
+</body>
+</html>

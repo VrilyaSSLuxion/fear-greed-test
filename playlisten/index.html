@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="de">
+<head><script>/* Testversion: eigene Browser-Einstellungen, getrennt von der Live-Seite */window.SITE_TEST={"label":"TESTVERSION V23","live":"https://vrilyassluxion.github.io/"};
+(() => { try { const ls = window.localStorage, S = Storage.prototype, P = "t21~", INIT = P + '__init';
+  const get = S.getItem, set = S.setItem, del = S.removeItem, key = S.key, clr = S.clear, len = Object.getOwnPropertyDescriptor(S, 'length').get;
+  const raw = () => { const a = []; for (let i = 0, n = len.call(ls); i < n; i++) a.push(key.call(ls, i)); return a; };
+  if (get.call(ls, INIT) == null) { for (const k of raw()) if (k && !/^[a-z0-9]+~/.test(k)) try { set.call(ls, P + k, get.call(ls, k)); } catch (e) { } set.call(ls, INIT, String(Date.now())); }
+  const own = () => raw().filter(k => k && k.startsWith(P) && k !== INIT).map(k => k.slice(P.length)), mine = s => s === ls;
+  S.getItem = function (k) { return get.call(this, mine(this) ? P + k : k); }; S.setItem = function (k, v) { return set.call(this, mine(this) ? P + k : k, v); };
+  S.removeItem = function (k) { return del.call(this, mine(this) ? P + k : k); }; S.key = function (i) { return mine(this) ? (own()[i] ?? null) : key.call(this, i); };
+  S.clear = function () { if (!mine(this)) return clr.call(this); for (const k of own()) del.call(ls, P + k); };
+  Object.defineProperty(S, 'length', { configurable: true, enumerable: true, get() { return mine(this) ? own().length : len.call(this); } });
+} catch (e) { } })();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YouTube-Playlisten · VrilyaSS</title>
+<meta name="description" content="Ausgewählte Playlisten zu Trading-Systemen und -Themen.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='7' width='26' height='18' rx='5' fill='%23ff3b3b'/%3E%3Cpath d='M13 11l8 5-8 5z' fill='%23fff'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../links.css">
+<link rel="stylesheet" href="../nav.css">
+</head>
+<body>
+<div class="page">
+  <nav class="apptabs" id="siteNav" data-page="playlisten"></nav>
+  <div id="lp"></div>
+  <footer id="lpFoot"></footer>
+</div>
+<!-- V21: Inhalt dieser Seite – neue Einträge einfach in „items“ ergänzen (Format siehe ../links.js); Texte als { de, en, ar } -->
+<script>
+window.LINKPAGE = {
+ "docTitle": {
+  "de": "YouTube-Playlisten · VrilyaSS",
+  "en": "YouTube playlists · VrilyaSS",
+  "ar": "قوائم يوتيوب · VrilyaSS"
+ },
+ "title": {
+  "de": "YouTube-<span>Playlisten</span> zu Trading",
+  "en": "YouTube trading <span>playlists</span>",
+  "ar": "<span>قوائم يوتيوب</span> للتداول"
+ },
+ "lead": {
+  "de": "Ausgewählte Playlisten zu Trading-Systemen und -Themen.",
+  "en": "Selected playlists on trading systems and topics.",
+  "ar": "قوائم تشغيل مختارة حول أنظمة ومواضيع التداول."
+ },
+ "note": {
+  "de": "Inhalte und genaue Links ergänzt der Seitenbetreiber nach und nach. Einträge mit 🔎 öffnen bis dahin die YouTube-Suche.",
+  "en": "The site owner adds content and exact links step by step. Until then, entries marked 🔎 open YouTube search.",
+  "ar": "يضيف صاحب الموقع المحتوى والروابط الدقيقة تدريجياً. حتى ذلك الحين تفتح العناصر المعلّمة 🔎 بحث يوتيوب."
+ },
+ "groups": [
+  {
+   "items": [
+    {
+     "name": "SK-System",
+     "yt": "SK System trading",
+     "soon": true,
+     "tags": [
+      "System"
+     ],
+     "see": [
+      {
+       "label": {
+        "de": "Trading-Strategien",
+        "en": "Trading strategies",
+        "ar": "استراتيجيات التداول"
+       },
+       "href": "../strategien/"
+      }
+     ]
+    },
+    {
+     "name": "LSOB-Bootcamp",
+     "yt": "LSOB Bootcamp Crypto Claudius",
+     "soon": true,
+     "desc": {
+      "de": "Bootcamp zum Liquidity Sweep Order Block (LSOB) von Crypto Claudius.",
+      "en": "Bootcamp on the Liquidity Sweep Order Block (LSOB) by Crypto Claudius.",
+      "ar": "معسكر تدريبي حول LSOB (كتلة أوامر كسح السيولة) من Crypto Claudius."
+     },
+     "tags": [
+      "LSOB"
+     ],
+     "see": [
+      {
+       "label": {
+        "de": "LSOB / FVG / BOS im Fear-&-Greed-Chart",
+        "en": "LSOB / FVG / BOS in the Fear & Greed chart",
+        "ar": "LSOB / FVG / BOS في رسم Fear & Greed"
+       },
+       "href": "../fear-greed/"
+      },
+      {
+       "label": {
+        "de": "Trading-Strategien",
+        "en": "Trading strategies",
+        "ar": "استراتيجيات التداول"
+       },
+       "href": "../strategien/"
+      }
+     ]
+    },
+    {
+     "name": "Fibonacci",
+     "yt": "Fibonacci trading",
+     "soon": true,
+     "desc": {
+      "de": "Fibonacci-Retracements und -Extensions im Trading.",
+      "en": "Fibonacci retracements and extensions in trading.",
+      "ar": "تصحيحات وامتدادات فيبوناتشي في التداول."
+     },
+     "tags": [
+      "Fibonacci"
+     ],
+     "see": [
+      {
+       "label": {
+        "de": "Fib Overlay (Trading Tools)",
+        "en": "Fib Overlay (Trading Tools)",
+        "ar": "Fib Overlay (أدوات التداول)"
+       },
+       "href": "../tools/"
+      }
+     ]
+    },
+    {
+     "name": "CRT (Candle Range Theory)",
+     "yt": "CRT candle range theory trading",
+     "soon": true,
+     "tags": [
+      "CRT"
+     ],
+     "see": [
+      {
+       "label": {
+        "de": "Trading-Strategien",
+        "en": "Trading strategies",
+        "ar": "استراتيجيات التداول"
+       },
+       "href": "../strategien/"
+      }
+     ]
+    },
+    {
+     "name": "Ramtin FX",
+     "yt": "Ramtin FX",
+     "soon": true,
+     "see": [
+      {
+       "label": {
+        "de": "Trading-Strategien",
+        "en": "Trading strategies",
+        "ar": "استراتيجيات التداول"
+       },
+       "href": "../strategien/"
+      }
+     ]
+    },
+    {
+     "name": "Nitro Trades",
+     "yt": "Nitro Trades",
+     "soon": true
+    }
+   ]
+  }
+ ]
+};
+</script>
+<script src="../links.js"></script>
+<script src="../nav.js"></script>
+</body>
+</html>
